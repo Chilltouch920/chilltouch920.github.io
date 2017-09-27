@@ -5,12 +5,16 @@
  */
 
 $(window).scroll(function () {
-
-    if ($(window).scrollTop() > 250) {
-      $('#headercontainer').addClass('headercontainerfixed');
-    }
-    if ($(window).scrollTop() < 293) {
-      $('#headercontainer').removeClass('headercontainerfixed');
-    }
-  });
+    var windowSize = $(window).width();
+if (windowsize <= 480){
+if ($(window).scrollTop() > 250) {
+$('#headercontainer').addClass('headercontainerfixed');
+}
+}
+if (windowsize <= 480){
+if ($(window).scrollTop() < 293) {
+$('#headercontainer').removeClass('headercontainerfixed');
+}
+}
+});
  
