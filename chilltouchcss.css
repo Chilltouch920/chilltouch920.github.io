@@ -1,0 +1,259 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 18, 2017, 1:59:07 PM
+    Author     : Work
+*/
+
+body{
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    font-family: Footlight MT Light;
+}
+.sectiontitle{
+    letter-spacing: 5px;
+}
+.bannerimg{
+    width: 100%;
+    height: auto;
+}
+.itembox *{
+    box-sizing: border-box;
+}
+.itembox{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+    padding: 0px;
+}
+.itemimg{
+    max-width: 100%;
+}
+.itembox .itemimg{
+    display: block;
+}
+.itembox .itemoverlay{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(29, 161, 242, 0.6);
+    color: #fff;
+    padding: 15px;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -ms-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+.itembox:hover .itemoverlay, .itembox:active .itemoverlay{
+    opacity: 1;
+}
+.itembox .itemtext{
+    text-align: center;
+    font-size: 2.5em;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+div{
+    display:block;
+    overflow:auto;
+}
+
+#headerbanner{
+    background-color: #000000;
+}
+#headerbanner img{
+    max-width: 590px;
+    width: 100%;
+    height: auto;
+}
+#storecontainer{
+    background-color: #000000;
+    padding: 20px;
+}
+#contactcontainer{
+    background-color: #000000;
+    padding: 20px;
+}
+#footercontainer{
+    background-color: #000000;
+    padding: 20px;
+}
+#headercontainer{
+    background-color: #000000;
+    padding: 20px;
+}
+.headercontainerfixed{
+    background-color: #000000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    z-index: 10;
+}
+#musiccontainer{
+    background-color: #000000;
+    padding: 20px;
+}
+#newscontainer{
+    background-color: #000000;
+    padding: 20px;
+}
+#slideshowcontainer{
+    background-color: #000000;
+    padding: 20px;
+}
+.nav {
+    width:100%;
+    margin:0 auto;
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-family: Footlight MT Light;
+    font-size: 1.2em;
+    letter-spacing: 1.5px;
+    display: inline-block;
+}
+.nav a {
+    text-align:center;
+    padding: 5px;
+    margin:0;
+    display:block;
+    width: 200px;
+    display: inline-block;
+}
+.nav a:hover {
+    background:#1da1f2;
+    border:none;
+}
+.fa{
+    padding: 10px;
+    font-size: 2.5em;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    margin: 15px 2px;
+    padding: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+a:link{
+    color: #cccccc;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+}
+a:visited {
+    color: #cccccc;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+
+}
+a.fa-bandcamp:hover {
+    color: #639aa9;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+}
+a.fa-facebook:hover {
+    color: #3b5998;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+}
+a.fa-soundcloud:hover {
+    color: #ff5500;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+}
+a.fa-star:hover {
+    color: #e43526;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+}
+a.fa-twitter:hover {
+    color: #1da1f2;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+}
+a.fa-instagram:hover {
+    background: -webkit-linear-gradient(305deg, #3051F1 10%, #C92BB7 70%) no-repeat;
+    background: linear-gradient(145deg, #3051F1 10%, #C92BB7 70%) no-repeat;
+    border-radius: 18.5%;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+}
+a.fa-youtube:hover {
+    color: #e62117;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+}
+a.fa-spotify:hover{
+    color: #1ed760;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+}
+a:active {
+    color: #cccccc;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+
+}
+.fa-2x{
+}
+.headernavitem{
+    
+}
+footer{
+    background-color: #000000;
+}
+section{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+#mailinglistform{
+    display:  inline-block;
+    text-align: center;
+    
+}
+#footerlogo{
+    padding-left: 50px;
+    padding-right: 50px;
+}
