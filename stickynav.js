@@ -16,5 +16,8 @@ if ($(window).scrollTop() < 293) {
 $('#headercontainer').removeClass('headercontainerfixed');
 }
 }
+if(windowsize <= 480){
+    $('#')
+}
 });
  

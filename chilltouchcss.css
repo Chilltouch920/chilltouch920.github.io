@@ -254,6 +254,14 @@ section{
     
 }
 #footerlogo{
-    padding-left: 100px;
-    padding-right: 100px;
+}
+@media only screen and (min-width: 500px) {
+    #footermobile {
+        display: none;
+    }
+}
+@media only screen and (max-width: 500px){
+    .footerfooter{
+        display: none;
+    }
 }
