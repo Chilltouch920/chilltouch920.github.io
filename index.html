@@ -7,134 +7,239 @@ and open the template in the editor.
 <html>
     <head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108163996-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108163996-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-  gtag('config', 'UA-108163996-1');
-</script>
-
+            gtag('config', 'UA-108163996-1');
+        </script>
+        <script type="text/javascript" src="path/to/instafeed.min.js"></script>
+        <script type="text/javascript" src="stickynav.js"></script>
         <title>Chilltouch | Official Site</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
+        <meta name="description" content="The official website for midwest rap artist Chilltouch. New album Fetal Position out now!">
+        <meta name="keywords" content="chilltouch, shane, wasinger, wicked, horrorcore, horror, rap, fetal, position, high, on, hell, reaper">
         <meta name="author" content="Devon Kavaline">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" type="img/png" href="Images/favicon.png">
         <link href="chilltouchcss.css" rel="stylesheet" type="text/css"/>
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
         <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="stickynav.js"></script>
+        <!--<script src="stickynav.js"></script>-->
     </head>
     <body>
+        <!-- Top header, contains image of artist name. -->
         <header>
-            <div id="headerbanner" style="display: none;">
+            <div id="headerbanner">
                 <img class="" id="top" src="Images/chilltouchbanner.png" alt="header banner" height="75" width="590"/>
             </div>
         </header>
+        <!-- Second header, contains the navigation bar and content for bio modal -->
         <header>
-            <hr style="display: none;">
-            <div id="headercontainer" style="display: none;">
+            <hr>
+            <!-- Navigation Bar -->
+            <div>
                 <nav class="nav" >
-                    <a href="#top" class="headernavitem">HOME</a>
-                    <a href="#newscontainer" class="headernavitem">NEWS</a>
-                    <a href="#musiccontainer" class="headernavitem">MUSIC</a>
-                    <a href="#storecontainer" class="headernavitem">STORE</a>
-                    <a href="#contactcontainer" class="headernavitem">CONTACT</a>
+                    <a href="#top">HOME</a>
+                    <!--<a href="#newscontainer">NEWS</a>-->
+                    <a href="#musiccontainer">MUSIC</a>
+                    <!--<a href="#storecontainer">STORE</a>-->
+                    <a href="#gallerycontainer">GALLERY</a>
+                    <a href="#contactcontainer">CONTACT</a>
+                    <!-- Bio button modal -->
+                    <div>
+                        <!-- Trigger/Open The Modal -->
+                        <button id="myBtn">BIO</button>
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h1>What is Chilltouch?</h1>
+                                <p>Chilltouch got its start back in 2004 in the frozen tundra known as Wisconsin.</p>
+                                <p>Chilltouch fuses multiple genres together like rap, wicked shit, and metal.</p>
+                                <p>Chilltouch comprises of one constant member, Chronic, however he gets help from his
+                                    bandmates. OJB, besides sharing the stage with Chronic, brings his heavy vocals 
+                                    and metal influences into the mix. Cyanide creates unforgettable guitar 
+                                    laced and electronic beats to bring tracks to the next level and also writes lyrics.
+                                    Relic writes lyrics and also brings his vocal talents.</p>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
             </div>
-            <hr style="display: none;">
+            <hr>
         </header>
+        <!-- Contains a slide show for various show images, right now contains one image for the album release. -->
         <div id="slideshowcontainer">
             <img class="bannerimg" src="Images/chilltouchslideshowimagealbumcomingsoon.png" alt="Slideshow image Album Fetal Position coming soon" height="600" width="2000"/>
         </div>
-        <section>
-            <div id="newscontainer" style="display: none;">
-                <h1 class="sectiontitle">NEWS</h1>
+        <!-- This section contains news, "upcoming shows, announcements, etc." -->
+        <!--<section>
+            <div id="newscontainer">
+                <h1 class="sectiontitle">UPCOMING SHOWS</h1>
                 <hr>
                 <span>I have a show soon</span>
             </div>
-        </section>
+        </section>-->
+        <!-- Contains a grid of released music for the user to click links to albums for streaming -->
         <section>
-            <div id="musiccontainer" style="display: none;">
+            <div id="musiccontainer">
                 <h1 class="sectiontitle">MUSIC</h1>
                 <hr>
                 <div class="itembox">
                     <img src="Images/fetalpositionalbumcover.png" alt="Fetal Position Listen" height="250" width="250" class="itemimg"/>
                     <div class="itemoverlay">
-                        <div class="itemtext">Listen</div>
+                        <div class="itemtext"><a href="https://soundcloud.com/chilltouch/sets/fetal-position-sampler" target="_blank">Listen</a></div>
                     </div>
                 </div>
                 <div class="itembox">
                     <img src="Images/highonhellalbumcover.jpg" alt="High On Hell Listen" height="250" width="250" class="itemimg"/>
                     <div class="itemoverlay">
-                        <div class="itemtext">Listen</div>
+                        <div class="itemtext"><a href="https://soundcloud.com/chilltouch/sets/high-on-hell" target="_blank">Listen</a></div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- merchandise for an official store, as of right now it only contains the two albums. -->
+        <!-- <section>
+             <div id="storecontainer">
+                 <h1 class="sectiontitle">OFFICIAL STORE</h1>
+                 <hr>
+                 <div class="itembox">
+                     <img src="Images/fetalpositionalbumcover.png" alt="Fetal Position Listen" height="250" width="250" class="itemimg"/>
+                     <div class="itemoverlay">
+                         <div class="itemtext">Buy</div>
+                     </div>
+                 </div>
+                 <div class="itembox">
+                     <img src="Images/highonhellalbumcover.jpg" alt="High On Hell Listen" height="250" width="250" class="itemimg"/>
+                     <div class="itemoverlay">
+                         <div class="itemtext">Buy</div>
+                     </div>
+                 </div>
+                 <hr>
+             </div> 
+         </section> -->
+        <!--Used to display images via Instagram,-->
         <section>
-            <div id="storecontainer" style="display: none;">
-                <h1 class="sectiontitle">OFFICIAL STORE</h1>
+            <div id="gallerycontainer">
+                <h1 class="sectiontitle">GALLERY</h1>
                 <hr>
-                <div class="itembox">
-                    <img src="Images/fetalpositionalbumcover.png" alt="Fetal Position Listen" height="250" width="250" class="itemimg"/>
-                    <div class="itemoverlay">
-                        <div class="itemtext">Buy</div>
-                    </div>
-                </div>
-                <div class="itembox">
-                    <img src="Images/highonhellalbumcover.jpg" alt="High On Hell Listen" height="250" width="250" class="itemimg"/>
-                    <div class="itemoverlay">
-                        <div class="itemtext">Buy</div>
-                    </div>
-                </div>
+                <!-- SnapWidget -->
+                <iframe src="https://snapwidget.com/embed/668082" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:495px; height:580px"></iframe>
                 <hr>
             </div>
         </section>
+        <!-- Contains contact information for a possible support@chilltouch.net and the ability to sign up for a mailing list. -->
         <section>
-            <div id="contactcontainer" style="display: none;">
+            <div id="contactcontainer">
                 <h1 class="sectiontitle">CONTACT</h1>
                 <hr>
+                <!-- Begin Mailchimp Signup Form -->
                 <div>
-                    <h4 class="sectiontitle">GET THE LATEST NEWS FIRST</h4>
-                    <h4 class="sectiontitle">JOIN THE MAILING LIST</h4>
-                    <form method="post" action="add.php" name="signup" id="mailinglistform">
-                        <input type="hidden" name="pommo_signup" value="true" />
-                        <table>
-                            <tr>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td> NAME:  <input name="name" type="text" size="20" maxlength="100" /></td></tr>
-                            <tr>
-                                <td> EMAIL:<input name="email" type="text" size="20" maxlength="100" /></td>
-                            </tr>
-                            <tr>
-                                <td><span style="text-align: left"></span><p>
-                                    </p></td>
-                            </tr>
-                        </table>
-                    </form>
+                    <div id="mc_embed_signup">
+                        <form action="https://chilltouch.us20.list-manage.com/subscribe/post?u=662896ada778eee8a860ee99d&amp;id=722e3edc9a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <h2>Subscribe to the Chilltouch mailing list</h2>
+                                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                                <div class="mc-field-group">
+                                    <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                                    </label>
+                                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                                </div>
+                                <div class="mc-field-group">
+                                    <label for="mce-FNAME">First Name </label>
+                                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                                </div>
+                                <div class="mc-field-group">
+                                    <label for="mce-LNAME">Last Name </label>
+                                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                                </div>
+                                <div class="mc-field-group size1of2">
+                                    <label for="mce-BIRTHDAY-month">Birthday </label>
+                                    <div class="datefield">
+                                        <span class="subfield monthfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month"></span> / 
+                                        <span class="subfield dayfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day"></span> 
+                                        <span class="small-meta nowrap">( mm / dd )</span>
+                                    </div>
+                                </div>	<div id="mce-responses" class="clear">
+                                    <div class="response" id="mce-error-response" style="display:none"></div>
+                                    <div class="response" id="mce-success-response" style="display:none"></div>
+                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_662896ada778eee8a860ee99d_722e3edc9a" tabindex="-1" value=""></div>
+                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
+        <!-- contains all of chilltouch's social media account links including, facebook, twitter, bandcamp, soundcloud, youtube, and spotify -->
         <footer>
             <nav id="footercontainer">
-                <a href="https://www.facebook.com/Chilltouch/?fref=ts" class="fa fa-facebook fa-2x" target="_blank"></a>
-                <a href="https://twitter.com/BR_Chilltouch?lang=en" class="fa fa-twitter fa-2x" target="_blank"></a>
-                <a href="https://www.reverbnation.com/chilltouch" class="fa fa-star fa-2x" target="_blank"></a>
-                <a href="https://chilltouch.bandcamp.com/" class="fa fa-bandcamp fa-2x" target="_blank"></a>
-                <a href="https://soundcloud.com/chilltouch" class="fa fa-soundcloud fa-2x" target="_blank"></a>
-                <a href="https://www.instagram.com/chilltouch920/" class="fa fa-instagram fa-2x" target="_blank"></a>
-                <a href="https://www.youtube.com/user/BlazedChilltouch/" class="fa fa-youtube fa-2x" target="_blank"></a>
-                <a href="#" class="fa fa-spotify fa-2x" target="_blank" style="display: none;"></a>
+                <a href="https://www.facebook.com/Chilltouch/?fref=ts"  class="fa fa-facebook" target="_blank"></a>
+                <!--<a href="https://twitter.com/BR_Chilltouch?lang=en" class="fa fa-twitter" target="_blank"></a>--> 
+                <a href="https://chilltouch.bandcamp.com/" class="fa fa-bandcamp" target="_blank"></a>
+                <a href="https://soundcloud.com/chilltouch" class="fa fa-soundcloud" target="_blank"></a>
+                <a href="https://www.youtube.com/user/BlazedChilltouch/" class="fa fa-youtube" target="_blank"></a>
+                <!--<a href="#" class="fa fa-spotify" target="_blank" ></a>-->
             </nav>
-            <span class="footerfooter">Copyright &copy; Chilltouch</span> <img src="Images/chilltouchlogo_color.png" alt="logo" height="50" width="155" id="footerlogo" class="footerfooter"/> <span class="footerfooter">ALL RIGHTS RESERVED</span>
-            <div id="footermobile"><div>Copyright &copy; Chilltouch</div> <img src="Images/chilltouchlogo_color.png" alt="logo" height="50" width="155" id="footerlogo"/><div>ALL RIGHTS RESERVED</div></div>
+            <div id="footerfooter"><span>Chilltouch &copy; 2019</span> <img src="Images/chilltouchlogo_color.png" alt="logo" height="50" width="155"/> <span>ALL RIGHTS RESERVED</span></div>
+            <div id="footermobile"><div>Chilltouch &copy; 2019</div> <img src="Images/chilltouchlogo_color.png" alt="logo" height="50" width="155"/><div>ALL RIGHTS RESERVED</div></div>
         </footer>
+        <!-- Various Scripts -->
         <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function ($) {
+                window.fnames = new Array();
+                window.ftypes = new Array();
+                fnames[0] = 'EMAIL';
+                ftypes[0] = 'email';
+                fnames[1] = 'FNAME';
+                ftypes[1] = 'text';
+                fnames[2] = 'LNAME';
+                ftypes[2] = 'text';
+                fnames[3] = 'ADDRESS';
+                ftypes[3] = 'address';
+                fnames[4] = 'PHONE';
+                ftypes[4] = 'phone';
+                fnames[5] = 'BIRTHDAY';
+                ftypes[5] = 'birthday';
+            }(jQuery));
+            var $mcj = jQuery.noConflict(true);</script><!--End mc_embed_signup-->
+        <script>
+// Get the modal
+            var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+            btn.onclick = function () {
+                modal.style.display = "block";
+            };
+
+// When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            };
+
+// When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            };
+        </script>
     </body>
 </html>

@@ -5,7 +5,7 @@ and open the template in the editor.
 */
 /* 
     Created on : Sep 18, 2017, 1:59:07 PM
-    Author     : Work
+    Author     : Devon Kavaline
 */
 
 body{
@@ -13,6 +13,23 @@ body{
     color: #ffffff;
     text-align: center;
     font-family: Footlight MT Light;
+
+}
+#mc_embed_signup{
+    background:#000000;
+    clear:left;
+    font:14px Helvetica,Arial,sans-serif;
+    overflow:auto;
+}
+#mc_embed_signup div{
+    min-height: 50px;
+    width: 95%;
+}
+#mc_embed_signup label{
+    max-width: 1000px;
+}
+#mc_embed_signup input{
+    max-width: 1000px;
 }
 .sectiontitle{
     letter-spacing: 5px;
@@ -70,12 +87,10 @@ body{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-
 div{
     display:block;
     overflow:auto;
 }
-
 #headerbanner{
     background-color: #000000;
 }
@@ -90,7 +105,6 @@ div{
 }
 #contactcontainer{
     background-color: #000000;
-    padding: 20px;
 }
 #footercontainer{
     background-color: #000000;
@@ -121,15 +135,21 @@ div{
     padding: 20px;
 }
 .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
     width:100%;
+    height: 100px;
     margin:0 auto;
-    padding:0;
+    padding:0px;
+    z-index: 100;
     list-style:none;
     text-align:center;
     font-family: Footlight MT Light;
     font-size: 1.2em;
     letter-spacing: 1.5px;
     display: inline-block;
+    background-color: #000000;
 }
 .nav a {
     text-align:center;
@@ -138,10 +158,23 @@ div{
     display:block;
     width: 200px;
     display: inline-block;
+    transition-property: all;
+    transition-duration: 0.75s;
 }
 .nav a:hover {
     background:#1da1f2;
     border:none;
+}
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
 }
 .fa{
     padding: 10px;
@@ -153,8 +186,9 @@ div{
     padding: 4px;
     padding-left: 2px;
     padding-right: 2px;
+    transition-property: all;
+    transition-duration: .75s;
 }
-
 a:link{
     color: #cccccc;
     background-color: transparent;
@@ -206,9 +240,7 @@ a.fa-twitter:hover {
     margin: 5px;
 }
 a.fa-instagram:hover {
-    background: -webkit-linear-gradient(305deg, #3051F1 10%, #C92BB7 70%) no-repeat;
-    background: linear-gradient(145deg, #3051F1 10%, #C92BB7 70%) no-repeat;
-    border-radius: 18.5%;
+    color: #b52bad;
     background-color: transparent;
     text-decoration: none;
     text-align: center;
@@ -236,11 +268,6 @@ a:active {
     margin: 5px;
 
 }
-.fa-2x{
-}
-.headernavitem{
-    
-}
 footer{
     background-color: #000000;
 }
@@ -251,17 +278,107 @@ section{
 #mailinglistform{
     display:  inline-block;
     text-align: center;
-    
+
 }
-#footerlogo{
+#myBtn{
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    font-family: Footlight MT Light;
+    transition-property: all;
+    transition-duration: .75s;
+}
+#myBtn:hover{
+    background-color: #1da1f2;
+}
+#myModal{
+
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.75); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: #000000;
+    margin: 10% auto auto auto;
+    padding: 20px;
+    border: 4px solid #2487ab;
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: auto;
+    opacity: 75%;
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 @media only screen and (min-width: 500px) {
     #footermobile {
         display: none;
     }
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width:100%;
+        height: auto;
+        margin:0 auto;
+        padding:0px;
+        z-index: 100;
+        list-style:none;
+        text-align:center;
+        font-family: Footlight MT Light;
+        font-size: 1.2em;
+        letter-spacing: 1.5px;
+        display: inline-block;
+        background-color: #000000;
+    }
 }
 @media only screen and (max-width: 500px){
-    .footerfooter{
+    #footerfooter{
         display: none;
+    }
+    .itemimg, .itemoverlay, .itemtext{
+        display: none;
+    }
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width:100%;
+        height: auto;
+        margin:0 auto;
+        padding:0px;
+        z-index: 100;
+        list-style:none;
+        text-align:center;
+        font-family: Footlight MT Light;
+        font-size: 1.2em;
+        letter-spacing: 1.5px;
+        display: inline-block;
+        background-color: #000000;
     }
 }
