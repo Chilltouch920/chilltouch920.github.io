@@ -109,6 +109,19 @@ div{
 #footercontainer{
     background-color: #000000;
     padding: 20px;
+    width: 100%;
+    display: inline-block;
+}
+#footerfooter{
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+}
+#footerfooter img{
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+    max-width: 500px;
 }
 #headercontainer{
     background-color: #000000;
@@ -156,7 +169,8 @@ div{
     text-align:center;
     margin:0;
     display:block;
-    width: 200px;
+    min-width: 50px;
+    max-width: 100px;
     display: inline-block;
     transition-property: all;
     transition-duration: 0.75s;
@@ -320,9 +334,7 @@ section{
     cursor: pointer;
 }
 @media only screen and (min-width: 500px) {
-    #footermobile {
-        display: none;
-    }
+
     .nav {
         position: fixed;
         top: 0;
@@ -340,14 +352,11 @@ section{
         display: inline-block;
         background-color: #000000;
     }
-        #slideshowcontainer{
+    #slideshowcontainer{
         margin-top: 10%;
     }
 }
 @media only screen and (max-width: 500px){
-    #footerfooter{
-        display: none;
-    }
     .itemimg, .itemoverlay, .itemtext{
         display: none;
     }
