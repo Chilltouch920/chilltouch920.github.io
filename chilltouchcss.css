@@ -15,6 +15,9 @@ body{
     font-family: Footlight MT Light;
 
 }
+.navitem{
+    min-width: 100px;
+}
 #mc_embed_signup{
     background:#000000;
     clear:left;
@@ -139,9 +142,21 @@ div{
     background-color: #000000;
     padding: 20px;
 }
-#newscontainer{
-    background-color: #000000;
-    padding: 20px;
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    margin-left: 9.5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
 }
 #slideshowcontainer{
     background-color: #000000;
@@ -175,6 +190,7 @@ div{
     transition-property: all;
     transition-duration: 0.75s;
     padding: 10px 0;
+    margin-left: 5px;
 }
 .nav a:hover {
     background:#1da1f2;
