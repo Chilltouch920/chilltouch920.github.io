@@ -13,7 +13,6 @@ body{
     color: #ffffff;
     text-align: center;
     font-family: Footlight MT Light;
-
 }
 .navitem{
     min-width: 100px;
@@ -90,10 +89,10 @@ body{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-div{
+/*div{
     display:block;
     overflow:auto;
-}
+}*/
 #headerbanner{
     background-color: #000000;
 }
@@ -109,22 +108,20 @@ div{
 #contactcontainer{
     background-color: #000000;
 }
-#footercontainer{
-    background-color: #000000;
-    padding: 20px;
-    width: 100%;
+#footer, p{
     display: inline-block;
 }
-#footerfooter{
+#footercontainer{
     width: 100%;
     height: auto;
-    max-height: 150px;
+    max-height: 75px;
+    display: inline-block;
+    align-items: center; /* Vertically centers content */
 }
 #footerfooter img{
     width: 100%;
     height: auto;
-    max-height: 100px;
-    max-width: 500px;
+    max-height: 75px;
 }
 #headercontainer{
     background-color: #000000;
@@ -147,7 +144,6 @@ div{
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
 }
-
 .video-container iframe,
 .video-container object,
 .video-container embed {
@@ -202,7 +198,6 @@ div{
     top: 0;
     width: 100%;
 }
-
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
     padding-top: 60px;
